@@ -1,0 +1,160 @@
+@font-face {
+  font-family: Poppins-Thin;
+  src: url(font/Poppins-Thin.ttf);
+}
+@font-face {
+  font-family: Poppins-Reg;
+  src: url(font/Poppins-Regular.ttf);
+}
+/**FOR DESKTOP SCREENS **/
+body .main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body .main_container #text {
+  align-self: center;
+}
+body .main_container .text_container {
+  display: flex;
+  flex-direction: column;
+}
+body .main_container .text_container p {
+  font-family: Poppins-Thin;
+  font-weight: 200;
+  text-align: center;
+}
+body .main_container .text_container h1 {
+  font-family: Poppins-Reg;
+  text-align: center;
+  font-size: 2rem;
+}
+body .main_container .text_container span {
+  font-family: Poppins-Thin !important;
+  font-weight: 600;
+}
+body .main_container .grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+  margin-top: 5%;
+}
+body .main_container .grid_container h1 {
+  font-family: Poppins-Reg;
+}
+body .main_container .grid_container p {
+  font-family: Poppins-Thin;
+}
+body .main_container .grid_container .builder, body .main_container .grid_container .supervisor, body .main_container .grid_container .calculator, body .main_container .grid_container .karma {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 0.5rem;
+}
+body .main_container .grid_container img {
+  width: 3em;
+  align-self: flex-end;
+}
+body .main_container .grid_container .builder {
+  border-top: 0.2rem solid hsl(0deg, 78%, 62%);
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+body .main_container .grid_container .karma {
+  border-top: 0.2rem solid hsl(34deg, 97%, 64%);
+  grid-column: 2/3;
+  grid-row: 2;
+}
+body .main_container .grid_container .calculator {
+  border-top: 0.2rem solid hsl(212deg, 86%, 64%);
+  position: relative;
+  top: 9rem;
+}
+body .main_container .grid_container .supervisor {
+  border-top: 0.2rem solid hsl(180deg, 62%, 55%);
+  position: relative;
+  top: 9rem;
+}
+body header, body footer {
+  display: none;
+}
+
+/**FOR MOBILE SCREENS **/
+@media screen and (min-width: 375px) and (max-width: 1100px) {
+  body .main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  body .main_container #text {
+    width: 70%;
+  }
+  body .main_container .text_container p {
+    font-family: Poppins-Thin;
+    font-weight: 200;
+    text-align: center;
+  }
+  body .main_container .text_container h1 {
+    font-family: Poppins-Reg;
+    text-align: center;
+    font-size: 2rem;
+  }
+  body .main_container .text_container span {
+    font-family: Poppins-Thin !important;
+    font-weight: 600;
+  }
+  body .main_container .grid_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 5%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1em;
+  }
+  body .main_container .grid_container h1 {
+    font-family: Poppins-Reg;
+  }
+  body .main_container .grid_container p {
+    font-family: Poppins-Thin;
+  }
+  body .main_container .grid_container .builder, body .main_container .grid_container .supervisor, body .main_container .grid_container .calculator, body .main_container .grid_container .karma {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 0.5rem;
+    margin-top: 4rem;
+  }
+  body .main_container .grid_container img {
+    width: 3em;
+    align-self: flex-end;
+  }
+  body .main_container .grid_container .builder {
+    border-top: 0.2rem solid hsl(0deg, 78%, 62%);
+    grid-row: 2;
+    grid-column: 1;
+  }
+  body .main_container .grid_container .karma {
+    border-top: 0.2rem solid hsl(34deg, 97%, 64%);
+    grid-row: 3;
+    grid-column: 1;
+  }
+  body .main_container .grid_container .calculator {
+    border-top: 0.2rem solid hsl(212deg, 86%, 64%);
+    top: 0;
+    grid-row: 4;
+    grid-column: 1;
+  }
+  body .main_container .grid_container .supervisor {
+    border-top: 0.2rem solid hsl(180deg, 62%, 55%);
+    top: 0;
+    grid-row: 1;
+    grid-column: 1;
+  }
+}/*# sourceMappingURL=styles.css.map */

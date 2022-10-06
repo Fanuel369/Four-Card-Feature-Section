@@ -1,0 +1,200 @@
+@import "variables";
+@font-face {
+    font-family: Poppins-Thin;
+    src: url(font/Poppins-Thin.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Reg;
+    src: url(font/Poppins-Regular.ttf);
+}
+
+/**FOR DESKTOP SCREENS **/
+body {
+    .main_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+
+        #text {
+            align-self: center;
+        }
+
+        .text_container {
+            display: flex;
+            flex-direction: column;
+            p {
+                font-family: Poppins-Thin;
+                font-weight: 200;
+                text-align: center;
+            }
+
+            h1 {
+                font-family: Poppins-Reg;
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            span {
+                font-family: Poppins-Thin !important;
+                font-weight: 600;
+            }
+        }
+
+        .grid_container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 2em;
+            grid-row-gap: 2em;
+            margin-top: 5%;
+
+            h1 {
+                font-family: Poppins-Reg;
+            }
+
+            p {
+                font-family: Poppins-Thin;
+            }
+
+            .builder, .supervisor, .calculator, .karma {
+                display: flex;
+                flex-direction: column;
+                padding: 2em;
+                box-shadow:  2px 2px 20px rgba(0, 0, 0, 0.19);
+                border-radius: 0.5rem;
+            }
+    
+            img {
+                width: 3em;
+                align-self: flex-end;
+            }
+
+            .builder {
+                border-top: 0.2rem solid $builder_color;
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            .karma {
+                border-top: 0.2rem solid $karma_color;
+                grid-column: 2 / 3;
+                grid-row: 2;
+            }
+
+            .calculator {
+                border-top: 0.2rem solid $calculator_color;
+                position: relative;
+                top: 9rem;
+            }
+
+            .supervisor {
+                border-top: 0.2rem solid $supervisor_color;
+                position: relative;
+                top: 9rem;
+            }
+        }
+
+    }
+
+    header, footer {
+        display: none;
+    }
+}
+
+/**FOR MOBILE SCREENS **/
+@media screen and (min-width: $min_width) and (max-width: $max_width) {
+    body {
+        .main_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+
+            #text {
+                width: 70%;
+            }
+
+            .text_container {
+                p {
+                    font-family: Poppins-Thin;
+                    font-weight: 200;
+                    text-align: center;
+                }
+    
+                h1 {
+                    font-family: Poppins-Reg;
+                    text-align: center;
+                    font-size: 2rem;
+                }
+    
+                span {
+                    font-family: Poppins-Thin !important;
+                    font-weight: 600;
+                }
+            }
+    
+            .grid_container {
+                display: grid;
+                grid-template-columns: 1fr;
+                margin-top: 5%;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                gap: 1em;
+
+    
+                h1 {
+                    font-family: Poppins-Reg;
+                }
+    
+                p {
+                    font-family: Poppins-Thin;
+                }
+    
+                .builder, .supervisor, .calculator, .karma {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 2em;
+                    box-shadow:  2px 2px 20px rgba(0, 0, 0, 0.19);
+                    border-radius: 0.5rem;
+                    margin-top: 4rem;
+                }
+        
+                img {
+                    width: 3em;
+                    align-self: flex-end;
+                }
+    
+                .builder {
+                    border-top: 0.2rem solid $builder_color;
+                    grid-row: 2;
+                    grid-column: 1;
+                }
+    
+                .karma {
+                    border-top: 0.2rem solid $karma_color;
+                    grid-row: 3;
+                    grid-column: 1;
+                }
+    
+                .calculator {
+                    border-top: 0.2rem solid $calculator_color;
+                    top: 0;
+                    grid-row: 4;
+                    grid-column: 1;
+                }
+    
+                .supervisor {
+                    border-top: 0.2rem solid $supervisor_color;
+                    top: 0;
+                    grid-row: 1;
+                    grid-column: 1;
+                }
+            }
+    
+        }
+    }
+    
+}
